@@ -2,7 +2,7 @@ Summary:	Support for different testing frameworks
 Summary(pl.UTF-8):	Obsługa różnych szkieletów testowych
 Name:		Zope-Testing
 Version:	3.5.0
-Release:	1
+Release:	2
 License:	ZPL 2.1
 Group:		Libraries/Python
 Source0:	http://download.zope.org/distribution/zope.testing-%{version}.tar.gz
@@ -35,6 +35,7 @@ python ./setup.py build
 rm -rf $RPM_BUILD_ROOT
 
 python ./setup.py install \
+	--install-purelib=%{py_sitedir} \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
 
@@ -45,6 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitescriptdir}/zope/testing
-%{py_sitescriptdir}/zope.testing-*.egg-info
-%{py_sitescriptdir}/zope.testing-*-nspkg.pth
+%{py_sitedir}/zope/testing
+%{py_sitedir}/zope.testing-*.egg-info
+%{py_sitedir}/zope.testing-*-nspkg.pth
