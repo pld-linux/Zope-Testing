@@ -2,7 +2,7 @@ Summary:	Support for different testing frameworks
 Summary(pl.UTF-8):	Obsługa różnych szkieletów testowych
 Name:		Zope-Testing
 Version:	3.10.2
-Release:	3
+Release:	4
 License:	ZPL 2.1
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/z/zope.testing/zope.testing-%{version}.tar.gz
@@ -13,10 +13,7 @@ BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.710
 %pyrequires_eq	python-modules
-Requires:	Zope
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_noautoreq_pyegg	zope.exceptions
 
 %description
 This package provides a number of testing frameworks. It includes a
